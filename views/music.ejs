@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Music</title>
+
+        <style>
+
+        body{
+
+            background-image:url("https://wallpapercave.com/wp/itpr8gD.jpg");
+
+            background-repeat:no-repeat;
+
+            background-size: 100vw 100vh;
+
+        }
+
+        #box{
+
+            width:320px;
+
+            height:475px;
+
+            background-color:white;
+
+            display:flex;
+
+            flex-direction:column;
+
+            align-items:center;
+
+            justify-content: center;
+
+            gap:7%;
+
+            border-radius:20px;
+
+        }
+
+        #box{
+
+            position:absolute;
+
+            left:65%;
+
+            top:12%;
+
+ 
+
+        }
+
+        #btn{
+
+            width:80px;
+
+            height:40px;
+
+            background-color: blue;
+
+            color:white;
+
+            border-radius: 20px;
+
+        }
+
+        #btn:hover{
+
+            background-color: green;  
+
+        }
+
+    </style>
+
+    </head>
+
+    <body>
+
+     <div id="box">
+
+     <h2>Register form</h2>
+     <form method="post" action="/music">
+
+      <label>Event date:<input type="text" id="date" name="d"></label><hr style="border: 10px solid white; margin: 0;">
+
+      <label>Event time:<input type="text" id="time" name="t"></label><hr style="border: 10px solid white; margin: 0;">
+
+      <label>Event name:<input type="text" id="name" name="n"></label><hr style="border: 10px solid white; margin: 0;">
+
+      <label style="margin-left:-5%">Role:<input type="radio">Participant<input type="radio">Organiser</label><hr style="border: 10px solid white; margin: 0;">
+
+      <label>Venue:<input type="venue" name="v"></label><hr style="border: 10px solid white; margin: 0;">
+
+      <label>Description:<input type="des" name="des"></label><hr style="border: 10px solid white; margin: 0;">
+
+      <button type="submit" id="btn">submit</button>
+    </form>
+     </div>
+
+    </body>
+
+</html>

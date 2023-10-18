@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Faculty login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+         body{
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);  
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        #box{
+            max-width: 80%; /* Adjust the max-width for responsiveness */
+            width: 360px;
+            height: 450px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px; /* Adjust the gap for responsiveness */
+            margin: 10% auto; /* Center the box horizontally */
+            border-radius: 20px;
+        }
+        #btn{
+            width: 100px;
+            height: 40px;
+            background-color: blue;
+            color: white; 
+            border-radius: 20px;
+        }
+        #btn:hover{
+            background-color: green;
+        }
+        #usrname, #pswrd{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: larger;
+            gap:15%;
+        }
+        #inp{
+            width: 100%; /* Make the input fields expand to the container width */
+            height: 35px;
+        }    
+        </style>
+    </head>
+    <body>
+        <center>
+        <div id="box"> 
+        <h1>HOD login</h1>
+        <form method="post" action="/hod_login">
+          <label id="usrname"><b>Username</b>&nbsp;&nbsp;<input type="text" id="inp"name="hmail"></label><hr style="border: 10px solid white; margin: 0;">
+          <label id="pswrd"><b>Password</b>  &nbsp;&nbsp;<input type="password" id="inp" name="hpass"></label><hr style="border: 10px solid white; margin: 0;">
+          <button id="btn" type="submit">next</button>
+        </form>
+        </div>
+    </center>
+    </body>
+</html>

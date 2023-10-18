@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Complaint/Suggestion</title>
+        <style>
+          body{
+                background-image:linear-gradient(to top,#fad0c4 0%,#ffd1ff 100%);
+                background-repeat: no-repeat;
+                height:100vh;
+            }
+            #box{
+                width:350px;
+                height:500px;
+                background-color: white;
+                border-radius:20px; 
+                border:1px solid black;
+                margin-top:5%;
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content: center;
+                gap:10%;
+            } 
+            #btn{
+                width:100px;
+                height:40px;
+                background-color: blue;
+                border-radius:20px;
+                color:white;
+            }
+            #btn:hover{
+                background-color: green;
+            }
+            #rsn{
+                margin-top:-1%;
+            }
+            #usr_name{
+            width:180px;
+            height:35px;
+            } 
+            b{
+                font-size:x-large;
+                font-family:monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <div id="box">
+        <form method="post" action="/complaint">
+        <h2>Feedback</h2>
+          <label id="usrname"><b>Username</b>&nbsp;&nbsp;<hr style="border: 10px solid white; margin: 0;">
+          <label><b>Email: </b><input  id="usr_name"></label><hr style="border: 10px solid white; margin: 0;">
+        <label><b>Desination: </b><input type="radio" name="r1">Student<input type="radio" name="r1">Faculty</label><hr style="border: 10px solid white; margin: 0;">
+        <label><span></span><p id="rsn"><b>Reason: </b></p><p>(Please provide detailed description)</p><textarea id="des"></textarea></span></label><hr style="border: 10px solid white; margin: 0;">
+        <button id="btn">submit</button>
+    </form>
+        </div>
+    </center>
+    </body>
+</html>

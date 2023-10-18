@@ -1,0 +1,54 @@
+<!-- request.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Your HTML head content -->
+    <style>
+      table{
+        border:5px solid black;
+      }
+      th{
+        border:3px solid black;
+      }
+      tr{
+        border:1px solid black;
+      }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Time Duration</th>
+            <th>Event Name</th>
+            <th>Venue</th>
+            <th>Description</th>
+            <th>Accept/Reject</th>
+            <th>Status</th>
+        </tr>
+   <% if (sportsData.length > 0) { %>
+            <tr>
+                <% sportsData.forEach(function(sportsItem,index) { %>
+
+                        <td><%= sportsItem.date %></td>
+                        <td><%= sportsItem.time %></td>
+                        <td><%= sportsItem.name1 %></td>
+                        <td><%= sportsItem.venue %></td>
+                        <td><%= sportsItem.description %></td>
+                        <td><form><button type="button" id="acc">Accept</button>
+                        <button type="button" id="rej">Reject</button></form></td>
+                        <td><p class="st"></p></td>
+                <% }); %>
+            </tr>
+ </table>
+    <script>
+    document.getElementById("acc").addEventListener("click",() => {
+           document.getElementById("res").innerHTML = "Accepted";
+    }); 
+    document.getElementById("rej").addEventListener("click",() => {
+           document.getElementById("st").innerHTML = "Rejected";
+    }); 
+    </script>
+       </body>
+
+</html>

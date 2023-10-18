@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Announcements</title>
+        <style>
+            body {
+                background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+                background-repeat: no-repeat;
+                height: 100vh;
+                font-family: monospace;
+                font-size: x-large;
+            }
+        </style>
+    </head>
+    
+    <body>
+
+            <div>
+                <h2>Announcements!</h2>
+                <% if (announce.length > 0) { %>
+                    <div>
+                        <li>
+                            <% announce.forEach(function(ann) { %>
+                                <li>
+                                   <center><strong>Title:</strong> <%= ann.announcementTitle%></center> <br>
+                                    <strong>Content:</strong> <%= ann.announcementContent %><br>
+                                </li>
+                            <% }); %>
+                            </li>
+                    </div>
+                <% } %>
+                <form method="post" action="/announcement">
+                    <!-- Your form elements go here -->
+                </form>
+            </div>
+
+    </body>
+</html>

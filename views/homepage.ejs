@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>Homepage</title>
+         <meta name="viewport" content="width=device-width", initial-scale="1.0">
+         <style>
+            body{
+                width:1250px;
+                height: 1000px;
+                background-image:url("https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/file-co-curricular-banner-1600075133.jpg");
+                background-repeat:no-repeat;
+                background-size: 1240px 600px;
+                display:flex;
+                justify-content: left;
+
+            }
+            #bar{
+                width:900px;
+                height:60px;
+                background-color:white;
+                border-radius:40px;
+                display:flex;
+                flex-direction:row;
+                align-items:center;
+                justify-content: center;
+                font-family:Georgia, 'Times New Roman', Times, serif;
+                font-size:x-large;
+                margin-left:14%;
+            }
+            #bar1{
+                display:flex;
+                justify-content: center;
+            }
+            #side{
+                width:100px;
+                height:80px;
+                background-color: black;
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                gap:10%;
+                justify-content:center;
+                border-radius:20px;
+            }
+            #s1,#s2,#s3{
+                width:70px;
+                height:10px;
+                background-color:white;
+            }
+#sidebar {
+   width:150px;
+   height:600px;
+}
+#list{
+    width:150px;
+    height:350px;
+    background-color:white;
+    margin-left:-40%;
+    margin-top:80%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    gap:5%;
+    border-radius:20px;
+}
+li{
+    width:150px;
+    height:50px;
+    color:black;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    margin-left:-25%;
+}
+#ann{
+    background-color:#B3C100;
+    border-radius:20px;
+    
+}
+#stu{
+    background-color:#A5D8DD;
+    border-radius:20px;
+}
+#fac{
+    background-color:#6AB187;
+    border-radius:20px;
+}
+#sug{
+    background-color:#488A99;
+    border-radius:20px;
+}
+#hod{
+    background-color:#d8517c;
+    border-radius:20px;
+}
+a{
+text-decoration: none;
+color:white;    
+}
+button{
+    background-color: black;
+}
+    </style>
+    </head>
+    <body>
+       <div id="side"><div id="s1"></div><div id="s2" ><button  class="menu-button"></button></div><div id="s3"></div></div>
+       <div class="sidebar" id="sidebar">
+        <ul id="list">
+            <li id="ann"><a id="ann1" href="/faculty">Faculty login</a></li>
+            <li id="stu"><a href="/student">Student login</a></li>
+            <li id="fac"><a href="/announcement">Announcements</a></li>
+            <li id="sug"><a href="/complaint">Complaint/Suggestion</a></li>
+            <li id="hod"><a href="/hod">hod login</a></li>
+    </div>
+    <div id="bar1"><div id = "bar"><h3><center>Vishnu Institute of Technology</center></h3></div></div>
+    <script>
+const menuToggle = document.getElementById("side");
+const sidebar = document.getElementById("sidebar");
+menuToggle.addEventListener("click", function (e) {
+    
+    if (sidebar.style.display === "none" || sidebar.style.display === "") {
+        sidebar.style.display = "block";
+    } else {
+        sidebar.style.display = "none";
+    }
+});
+</script>
+    </body>
+</html>
